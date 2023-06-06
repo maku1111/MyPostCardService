@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.1);
+  min-height: 80vh;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.postcard-cell {
+  display: flex;
+  justify-content: center;
+}
+
+.postcard-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  position: relative; /* Positionierung der Buttons relativ zum Container */
+}
+.next-button {
+  position: absolute; /* Absolute Positionierung */
+  right: 0; /* Den Button an den rechten Rand verschieben */
+  margin-left: auto; /* Den Button nach rechts ausrichten */
+}
+
+.prev-button {
+  position: absolute; /* Absolute Positionierung */
+  left: 0; /* Den Button an den linken Rand verschieben */
+  margin-right: auto; /* Den Button nach links ausrichten */
+}
+
+.navigation-button {
+  width:75px; /* oder eine andere gewünschte Breite */
+  padding: 10px;
+  background: -webkit-linear-gradient(right, #003366, #004080, #0059b3);
+  background: linear-gradient(to left, #003366, #004080, #0059b3);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: px; /* Horizontaler Abstand zwischen den Buttons */
+}
+
+
+.navigation-button:hover {
+  background-color: lightgray;
+}
+
+.navigation-button:active {
+  background-color: gray;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-between; /* Horizontale Ausrichtung zwischen den Elementen */
+}
+
+.input-field:nth-child(2) {
+  margin-left: 30px; /* Horizontale Abstand zwischen First Name und Last Name Input */
+}
+
+.input-field {
+  flex: 1;
+  margin-right: px;
+}
+
+.input-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-field input,
+.input-field textarea,
+.input-field select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background: -webkit-linear-gradient(right, #003366, #004080, #0059b3);
+  background: linear-gradient(to left, #003366, #004080, #0059b3);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}

@@ -1,65 +1,65 @@
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-  font-family: Arial, sans-serif;
-}
-
-.container {
-  width: 400px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  font-size: 30px; /* Anpassen der Schriftgröße */
-  font-weight: bold; /* Hinzufügen von fettgedrucktem Schriftstil */
-}
-
-.signup-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-button {
-  padding: 10px 20px;
-  background: -webkit-linear-gradient(right, #003366, #004080, #0059b3);
-  background: linear-gradient(to left, #003366, #004080, #0059b3);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.login-link {
-  text-align: center;
-}
-
-.login-link a {
-  color: #003366;
-  text-decoration: none;
-}
-
-.login-link a:hover {
-  text-decoration: underline;
-}
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 8px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 30px; /* Anpassen der Schriftgröße */
+    font-weight: bold; /* Hinzufügen von fettgedrucktem Schriftstil */
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: -webkit-linear-gradient(right, #003366, #004080, #0059b3);
+    background: linear-gradient(to left, #003366, #004080, #0059b3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .login-link {
+    text-align: center;
+  }
+  
+  .login-link a {
+    color: #003366;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }

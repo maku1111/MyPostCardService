@@ -19,10 +19,12 @@ from django.urls import path
 from SignUp.views import signupaction
 from Login.views import loginaction
 from CreatePostcard.views import createpostcardaction
+from Home.views import homeaction
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/',signupaction, name='signup'),
     path('login/',loginaction,name='login'),
-    path('CreatePostcard/',createpostcardaction,name='createpostcard')
+    path('CreatePostcard/',createpostcardaction,name='createpostcard'),
+    path('',homeaction,name='home')
 ]

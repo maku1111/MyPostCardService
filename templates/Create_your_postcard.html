@@ -1,16 +1,62 @@
-<html>
-    <head>
-        <title>CreateYourPostcardHere</title>
-        <style>
-            body{
-                background-color: rgb(186, 167, 167);
-                color: rgb(50, 16, 90);
-                font-size: 40px;
-            }
-        </style>
-    </head>
-    <body>
-        <center><h1>Create Your Postcard Here DU KEK</h1></center>
-    </body>
+{% load static %}
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Postcard</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/Create_postcard.css' %}">
+    <script src="{% static 'JavaScript/Script.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Choose your Postcard design</h2>
+
+        <div class="postcard-cell">
+            <img id="current-image" class="postcard-image" src="{% static 'images/design1.jpg' %}">
+        </div>
+
+        <div class="button-row">
+            <button class="navigation-button prev-button" name="prev-button" onclick="changeImage('prev')">Previous</button>
+            <button class="navigation-button next-button" name="next-button" onclick="changeImage('next')">Next</button>
+        </div>
+        
+        <h3>Recipient Details</h3>
+        <form>
+            {% csrf_token %}
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="salutation">Salutation</label>
+                    <select id="salutation" name="salutation">
+                        <option value="mr">Mr</option>
+                        <option value="ms">Ms</option>
+                        <option value="mrs">Mrs</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Enter first name">
+                </div>
+                <div class="input-field">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Enter last name">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email">
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="message">Postcard message</label>
+                    <textarea id="message" name="message" placeholder="Enter message"></textarea>
+                </div>
+            </div>
+            <button type="submit">Send Postcard</button>
+        </form>
+    </div>
+</body>
 </html>

@@ -18,7 +18,7 @@ def signupaction(request):
         for key,value in d.items():
             if key=="password":
                 pwd=value
-            if key=="password2":
+            if key=="password_conf":
                 pwd_conf=value
         
         if pwd==pwd_conf:

@@ -2,12 +2,38 @@
 <html>
 <head>
   <title>Sign Up</title>
+  <script>
+    function validateForm() {
+      var password = document.getElementById('password').value;
+      var password_conf = document.getElementById('password_conf').value;
+
+      if (password !== password_conf) {
+        alert('Passwords do not match.');
+        return false; // Verhindert das Absenden des Formulars
+      }
+
+      return true; // Erlaubt das Absenden des Formulars
+    }
+
+    function validateIfFilled() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var passwordConf = document.getElementById("password_conf").value;
+
+      if (firstName === '' || lastName === '' || email === '' || password === '' || passwordConf === '') {
+        alert('Please fill in all fields.');
+        return false;
+      }
+    }
+  </script>
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'Css/Sign_up.css' %}">
 </head>
 <body>
   <div class="container">
-    <form class="sign-in-form" method="post">
+    <form class="sign-in-form" method="post" onsubmit="return validateForm(); return validateIfFilled();">
       {% csrf_token %}
       {% load static %}
       <h2>Sign Up</h2>
@@ -15,7 +41,7 @@
       <input type="text" id="lastName" placeholder="Last Name" required name="last_name">
       <input type="email" id="email" placeholder="Email" required name="email">
       <input type="password" id="password" placeholder="Password" required name="password">
-      <input type="password" id="password2" placeholder="Confirm Password" required name="password2">
+      <input type="password" id="password_conf" placeholder="Confirm Password" required name="password_conf">
       <button type="submit">Sign Up</button>
       <p class="login-link">I already have an account. <a href="http://localhost:8000/login/">Log in</a></p>
     </form>
