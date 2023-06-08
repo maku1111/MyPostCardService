@@ -35,3 +35,30 @@ nextButton.addEventListener("click", function() {
   changeImage("next");
 });
 
+function validateForm() {
+  var inputFields = document.getElementsByTagName("input");
+  var textareaField = document.getElementById("message");
+  var selectedField;
+
+  // Check if any input field is empty
+  for (var i = 0; i < inputFields.length; i++) {
+    if (inputFields[i].value === "") {
+      selectedField = inputFields[i];
+      break;
+    }
+  }
+
+  // Check if the textarea field is empty
+  if (textareaField.value === "") {
+    selectedField = textareaField;
+  }
+
+  // Display validation result
+  if (selectedField) {
+    alert("Please fill in all fields.");
+    selectedField.focus();
+    return false;
+  } else {
+    return true;
+  }
+}

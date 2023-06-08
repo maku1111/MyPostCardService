@@ -16,12 +16,12 @@
         </div>
 
         <div class="button-row">
-            <button class="navigation-button prev-button" name="prev-button" onclick="changeImage('prev')">Previous</button>
-            <button class="navigation-button next-button" name="next-button" onclick="changeImage('next')">Next</button>
+            <button class="navigation-button prev-button" name="prev-button" onclick="changeImage('prev')"><</button>
+            <button class="navigation-button next-button" name="next-button" onclick="changeImage('next')">></button>
         </div>
         
         <h3>Recipient Details</h3>
-        <form>
+        <form onsubmit="return validateForm();" method="POST">
             {% csrf_token %}
             <div class="input-group">
                 <div class="input-field">
