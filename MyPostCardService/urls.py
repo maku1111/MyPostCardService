@@ -20,11 +20,13 @@ from SignUp.views import signupaction
 from Login.views import loginaction
 from CreatePostcard.views import createpostcardaction
 from Home.views import homeaction
+from Logout.views import logoutaction
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/',signupaction, name='signup'),
     path('login/',loginaction,name='login'),
     path('CreatePostcard/',createpostcardaction,name='createpostcard'),
-    path('',homeaction,name='home')
+    path('',homeaction,name='home'),
+    path('logout/',logoutaction,name='logout')
 ]

@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postcard Service</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Css/Logout.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Postcard Sent</h2>
+        <p>The postcard has been sent. Thank you for using the Postcard Service.</p>
+        <div class="buttons">
+            <a href="{% url 'createpostcard' %}" class="button">Send another Postcard</a>
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+

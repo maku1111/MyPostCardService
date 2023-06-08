@@ -1,26 +1,32 @@
 // Array mit den Dateinamen der Designbilder
 var designImages = ["design1.jpg", "design2.jpg", "design3.jpg"];
 var currentImageIndex = 0;
+console.log(currentImageIndex)
 
 // Funktion zum Ändern des Designbilds
 function changeImage(direction) {
   if (direction === "prev") {
     if (currentImageIndex > 0) {
       currentImageIndex--;
+      console.log(currentImageIndex)
     } else {
       currentImageIndex = designImages.length - 1;
+      console.log(currentImageIndex)
     }
   } else if (direction === "next") {
     if (currentImageIndex < designImages.length - 1) {
       currentImageIndex++;
+      console.log(currentImageIndex)
     } else {
       currentImageIndex = 0;
+      console.log(currentImageIndex)
     }
   }
 
   var currentImage = document.getElementById("current-image");
   var newImageSource = "/static/images/" + designImages[currentImageIndex];
   currentImage.src = newImageSource;
+  document.getElementById("myIndex").value = currentImageIndex;
 }
 
 // Event-Listener für den "Previous" Button

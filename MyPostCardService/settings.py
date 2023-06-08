@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Login',
     'Home',
     'CreatePostcard',
+    'Logout',
 ]
 
 MIDDLEWARE = [
