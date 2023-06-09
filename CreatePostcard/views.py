@@ -28,7 +28,10 @@ def createpostcardaction(request):
         connection.close()
 
         currentImageIndex=request.POST.get('myIndex')
-        images = ["design1.jpg", "design2.jpg", "design3.jpg"]
+        images = []
+        for i in range(1, 31):
+            images.append(f"design{i}.jpg")
+
         current_image = images[int(currentImageIndex)]
         print(current_image)
          
