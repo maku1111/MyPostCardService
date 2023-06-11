@@ -21,6 +21,8 @@ from Login.views import loginaction
 from CreatePostcard.views import createpostcardaction
 from Home.views import homeaction
 from Logout.views import logoutaction
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +32,6 @@ urlpatterns = [
     path('',homeaction,name='home'),
     path('logout/',logoutaction,name='logout')
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
