@@ -14,7 +14,7 @@
       <input type="email" id="email" placeholder="Email" required name="email">
       <input type="password" id="password" placeholder="Password" required name="password">
       <button type="submit">Login</button>
-      <p class="create-account-link">Don't have an account? <a href="http://localhost:8000/signup/">Create new Account</a></p>
+      <p class="create-account-link">Don't have an account? <a href="{% url 'signup' %}">Create new Account</a></p>
 
       <!-- Fehlermeldung -->
       {% if messages %}
