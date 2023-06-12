@@ -8,5 +8,5 @@ def logoutaction(request):
         logout(request)
         return redirect('login')  # Geben Sie den Namen Ihrer Login-Seite an
     else:
-        return render(request, 'logout.html')
+        return render(request, 'Logout.html')
     
