@@ -3,7 +3,7 @@ var designImages = [];
 for (var i = 1; i <= 30; i++) {
   designImages.push("design" + i + ".jpg");
 }
-print(designImages);
+//print(designImages);
 
                   
 var currentImageIndex = 0;

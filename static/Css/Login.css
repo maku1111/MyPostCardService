@@ -50,6 +50,10 @@ button {
   width: 100%;
 }
 
+button:hover {
+  box-shadow: 0 0 10px rgba(19, 0, 78, 0.5); /* Change the box shadow on hover */
+}
+
 .create-account-link {
   text-align: center;
 }

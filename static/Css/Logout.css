@@ -37,6 +37,7 @@ body {
     margin-top: 20px;
     width: 100%;
   }
+
   
   .buttons button,
   .buttons a {
@@ -59,5 +60,9 @@ body {
   a.button {
     display: inline-block;
     text-decoration: none;
+  }
+
+  a.button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Change the box shadow on hover */
   }
   

@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from django.core.mail import EmailMessage, get_connection, send_mail
+from django.core.mail import EmailMessage
 from django.conf import settings
 
 import sqlite3
@@ -33,7 +33,7 @@ def createpostcardaction(request):
             images.append(f"design{i}.jpg")
 
         current_image = images[int(currentImageIndex)]
-        print(current_image)
+        #print(current_image)
          
 
         subject="You received an E-postcard"

@@ -19,7 +19,7 @@
             <a href="{% url 'createpostcard' %}" class="button">Send another Postcard</a>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
-                <button type="submit">Logout</button>
+                <button class="button" type="submit">Logout</button>
             </form>
         </div>
     </div>
