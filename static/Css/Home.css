@@ -34,6 +34,17 @@ body {
   
   .project-description {
     margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .project-description:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+
+  .project-description:last-line:after {
+    content: none;
   }
   
   .buttons {

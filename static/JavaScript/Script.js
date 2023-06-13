@@ -1,10 +1,10 @@
 // Array mit den Dateinamen der Designbilder
-var designImages = ["design1.jpg", "design2.jpg", "design3.jpg", "design4.jpg", "design5.jpg", "design6.jpg",
-                    "design7.jpg", "design8.jpg", "design9.jpg", "design10.jpg", "design11.jpg", "design12.jpg",
-                    "design13.jpg", "design14.jpg", "design15.jpg", "design16.jpg", "design17.jpg", "design18.jpg",
-                    "design19.jpg", "design20.jpg", "design21.jpg", "design22.jpg", "design23.jpg", "design24.jpg",
-                    "design25.jpg", "design26.jpg", "design27.jpg", "design28.jpg", "design29.jpg", "design30.jpg"               
-                  ];
+var designImages = [];
+for (var i = 1; i <= 30; i++) {
+  designImages.push("design" + i + ".jpg");
+}
+print(designImages);
+
                   
 var currentImageIndex = 0;
 console.log(currentImageIndex)
