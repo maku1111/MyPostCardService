@@ -17,8 +17,9 @@
       <table class="content">
         <!-- Tabelleninhalt hier einfügen -->
       </table>
-      <p class="project-description">Welcome to my website. My name is Maximilian Kuehn and I am currently in Malaysia to complete my semester abroad. Malaysia impresses me with its diverse nature, breathtaking landscapes and rich wildlife. The Malaysian rainforest is one of the oldest and richest in species in the world, with endemic plants and animals. Orangutans, tigers, elephants and the world's largest flower, Rafflesia, are just a few of the fascinating species. Underwater, Malaysia also beckons with colorful coral reefs and rich marine diversity. National parks such as Taman Negara, Bako, Kinabalu and Tunku Abdul Rahman Marine Park protect natural habitats and allow visitors to experience the beauty of Malaysian nature firsthand. The country's indigenous peoples have a deep connection to nature and maintain sustainable lifestyles. Malaysia is a paradise for nature lovers who want to explore the diverse wonders of nature and abundant wildlife.<br></p>
-      <p class="project-description">I, as a hobby wildlife photographer, think it's great here and want to give something back. On this website you can therefore send a selection of my own photos free of charge as an electronic postcard by e-mail to your friends. Have fun with it!<br></p>
+        {% for paragraph in paragraphs %}
+          <p class="project-description">{{ paragraph.content}}<br></p>
+        {% endfor %}
       <div class="buttons">
         <a href="{% url 'login' %}" class="button">Login</a>
         <a href="{% url 'signup' %}" class="button">Sign up</a>
