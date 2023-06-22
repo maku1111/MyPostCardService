@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <title>Userdaten bearbeiten</title>
+  <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SW1RGVWR2"></script>
+  <script src="{% static 'EditProfile.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'CSS/EditProfile.css' %}">
+</head>
+<body>
+    <div class="container">
+    <form class="edit-form" method="post" onsubmit="return validateForm();">
+      {% csrf_token %}
+      <header>
+        <h2>Change Email</h2>
+      </header>
+      <input type="email" id="new_email" placeholder="New Email" name="new_email">
+      
+      <header>
+        <h2>Change Password</h2>
+      </header>
+      <input type="password" id="new_password" placeholder="New Password" name="new_password">
+      <input type="password" id="confirm_password" placeholder="Confirm New Password" name="confirm_password">
+      <button type="submit" name="save_changes">Save Changes</button>
+    </form>
+
+    <form class="delete-form" method="post">
+      {% csrf_token %}
+      <button type="submit" name="delete_profile">Delete Profile</button>
+      <p class="go-back-link"><a href="{% url 'logout' %}">Go back</a></p>
+    </form>
+  </div>
+
+  <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

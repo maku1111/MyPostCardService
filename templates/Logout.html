@@ -26,6 +26,7 @@
         <p>The postcard has been sent. Thank you for using the Postcard Service.</p>
         <div class="buttons">
             <a href="{% url 'createpostcard' %}" class="button">Send another Postcard</a>
+            <a href="{% url 'editprofile' %}" class="button">Edit Profile</a>
             <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
                 <button class="button" type="submit">Logout</button>

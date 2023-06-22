@@ -1,7 +1,10 @@
+# Views.py for Home.html by Maximilian Kuehn, 22/06/2023
+
+# import from
 from django.shortcuts import render
 from .models import Paragraph
 
-# Create your views here.
+# loading context from paragraph objects
 def homeaction(request):
     paragraphs = Paragraph.objects.all()
     context = {'paragraphs': paragraphs}

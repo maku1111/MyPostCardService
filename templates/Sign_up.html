@@ -8,39 +8,7 @@
   <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8SW1RGVWR2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-8SW1RGVWR2');
-  </script>
-  <script>
-    function validateForm() {
-      var password = document.getElementById('password').value;
-      var password_conf = document.getElementById('password_conf').value;
-
-      if (password !== password_conf) {
-        alert('Passwords do not match.');
-        return false; // Verhindert das Absenden des Formulars
-      }
-
-      return true; // Erlaubt das Absenden des Formulars
-    }
-
-    function validateIfFilled() {
-      var firstName = document.getElementById("firstName").value;
-      var lastName = document.getElementById("lastName").value;
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-      var passwordConf = document.getElementById("password_conf").value;
-
-      if (firstName === '' || lastName === '' || email === '' || password === '' || passwordConf === '') {
-        alert('Please fill in all fields.');
-        return false;
-      }
-    }
-  </script>
+  <script src="{% static 'Sign_up.js' %}"></script>
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static 'Css/Sign_up.css' %}">
 </head>

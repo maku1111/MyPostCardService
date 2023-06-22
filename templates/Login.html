@@ -28,7 +28,7 @@
       <button type="submit">Login</button>
       <p class="create-account-link">Don't have an account? <a href="{% url 'signup' %}">Create new Account</a></p>
 
-      <!-- Fehlermeldung -->
+      <!-- error message -->
       {% if messages %}
         <ul class="messages">
           {% for message in messages %}

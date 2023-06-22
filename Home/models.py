@@ -1,6 +1,7 @@
 from django.db import models
 
-# Create your models here.
+# Class for loading text paragraphs from database
+# features: content
 class Paragraph(models.Model):
     content = models.TextField()
 
