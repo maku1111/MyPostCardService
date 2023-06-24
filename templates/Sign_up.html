@@ -25,6 +25,14 @@
       <input type="password" id="password_conf" placeholder="Confirm Password" required name="password_conf">
       <button type="submit">Sign Up</button>
       <p class="login-link">I already have an account. <a href="{% url 'login' %}">Log in</a></p>
+      <!-- error message -->
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </form>
   </div>
 </body>

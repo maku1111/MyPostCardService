@@ -6,27 +6,28 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 
 
+from django.contrib.auth.models import User
+
 def signupaction(request):
+    if request.method == "POST":
+        fn = request.POST.get('first_name')
+        ln = request.POST.get('last_name')
+        em = request.POST.get('email')
+        pw = request.POST.get('password')
+        pw_conf = request.POST.get('password_conf')
 
-    # read data from imput fields after POST request (click on Sign Up)
-    if request.method=="POST":
-        fn=request.POST.get('first_name')
-        ln=request.POST.get('last_name')
-        em=request.POST.get('email')
-        pw=request.POST.get('password')
-        pw_conf=request.POST.get('password_conf')
-
-        # check if password and confirmed passwords match
-        # if not, error massage appears
-        if pw!=pw_conf:
+        if pw != pw_conf:
             messages.error(request, 'Passwords do not match!')
-            
-        # if passwords match, new user will be created in database with username, email and password
+            print('pw do not match')
         else:
-            my_user = User.objects.create_user(username=em, email=em, password=pw)
-            my_user.first_name = fn
-            my_user.last_name = ln
-            my_user.save()
-            return redirect('login')    
-        
-    return render(request,'Sign_up.html')
+            # Überprüfen, ob der Benutzername bereits in der Datenbank vorhanden ist
+            if User.objects.filter(username=em).exists():
+                messages.error(request, 'Username already exists!')
+            else:
+                my_user = User.objects.create_user(username=em, email=em, password=pw)
+                my_user.first_name = fn
+                my_user.last_name = ln
+                my_user.save()
+                return redirect('login')
+
+    return render(request, 'Sign_up.html')
